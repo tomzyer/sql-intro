@@ -15,4 +15,10 @@
 -- | 2019 | Houston Astros                | 107       |
 -- | 2004 | St. Louis Cardinals           | 105       |
 
+SELECT year, MAX(wins)
+FROM teams
+WHERE year >= 1960
+GROUP BY year
+ORDER BY MAX(wins) DESC;
 
+-- cannot addd name here. It is not in either our GROUP BY or our aggregate funcion MAX. 
